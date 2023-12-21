@@ -9,6 +9,7 @@
 #include "Path.h"
 #include <string>
 #include <vector>
+#include "Edge.h"
 
 class Graph : public AbstractGraph {
 private:
@@ -24,6 +25,13 @@ public:
     void addEdge(int from, int to, int weight);
     int getIndex(const std::string& word);
     void addWord(const std::string& word);
+
+    Path* bellmanFord(int source);
+    Path* dijkstra(int source);
+protected:
+    void depthFirstSearch(bool* visited, int fromNode);
+    void breadthFirstSearch(bool* visited, int startNode);
+    Edge* edgeList(int& edgeCount);
 };
 
 

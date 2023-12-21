@@ -52,6 +52,7 @@ void Graph::addEdge(int from, int to, int weight) {
 }
  */
 
+
 void Graph::addWord(const std::string &word) {
     words.push_back(word);
     int newWordIndex = words.size() - 1;
@@ -75,7 +76,91 @@ void Graph::addWord(const std::string &word) {
         }
     }
 }
-/* Path Graph::shortestPath(const std::string& start, const std::string& end) {
+
+
+    void Graph::breadthFirstSearch(bool *visited, int startNode) {
+        int fromNode;
+        Queue queue = Queue(100);
+        queue.enqueue(Element(startNode));
+        while (!queue.isEmpty()) {
+            fromNode = queue.dequeue().getData();
+            for (int toNode = 0; toNode < vertexCount; toNode++) {
+                if (edges[fromNode][toNode] > 0) {
+                    if (!visited[toNode]) {
+                        visited[toNode] = true;
+                        queue.enqueue(Element(toNode));
+                    }
+                }
+            }
+        }
+    }
+
+    Path *Graph::bellmanFord(int source) {
+        Path* shortestPaths = initializePaths(source);
+        for (int i = 0; i < vertexCount - 1; i++){
+            for (int fromNode = 0; fromNode < vertexCount; fromNode++){
+                for (int toNode = 0; toNode < vertexCount; toNode++){
+                    int newDistance = shortestPaths[fromNode].getDistance() + edges[fromNode][toNode];
+                    if (newDistance < shortestPaths[toNode].getDistance()){
+                        shortestPaths[toNode].setDistance(newDistance);
+                        shortestPaths[toNode].setPrevious(fromNode);
+                    }
+                }
+            }
+        }
+        return shortestPaths;
+    }
+void Graph::depthFirstSearch(bool *visited, int fromNode) {
+    for (int toNode = 0; toNode < vertexCount; toNode++){
+        if (edges[fromNode][toNode] > 0){
+            if (!visited[toNode]){
+                visited[toNode] = true;
+                depthFirstSearch(visited, toNode);
+            }
+        }
+    }
+}
+Path *Graph::dijkstra(int source) {
+    Path* shortestPaths = initializePaths(source);
+    MinHeap heap = MinHeap(vertexCount);
+    for (int i = 0; i < vertexCount; i++){
+        heap.insert( HeapNode(shortestPaths[i].getDistance(), i));
+    }
+    while (!heap.isEmpty()){
+        HeapNode node = heap.deleteTop();
+        int fromNode = node.getName();
+        for (int toNode = 0; toNode < vertexCount; toNode++){
+            int newDistance = shortestPaths[fromNode].getDistance() + edges[fromNode][toNode];
+            if (newDistance < shortestPaths[toNode].getDistance()){
+                int position = heap.search(toNode);
+                heap.update(position, newDistance);
+                shortestPaths[toNode].setDistance(newDistance);
+                shortestPaths[toNode].setPrevious(fromNode);
+            }
+        }
+    }
+    return shortestPaths;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Path Graph::shortestPath(const std::string& start, const std::string& end) {
     int startIndex = getIndex(start);
     int endIndex = getIndex(end);
 

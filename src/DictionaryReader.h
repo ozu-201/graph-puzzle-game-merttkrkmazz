@@ -23,7 +23,4 @@ private:
 
 };
 
-
-
-
 #endif //GRAPH_PUZZLE_GAME_MERTTKRKMAZZ_DICTIONARYREADER_H
