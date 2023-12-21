@@ -13,7 +13,6 @@ protected:
 public:
     explicit AbstractGraph(int vertexCount);
     Path*  initializePaths(int source) const;
-
 };
 
 
