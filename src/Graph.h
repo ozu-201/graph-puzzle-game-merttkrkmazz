@@ -15,9 +15,9 @@ private:
     int **edges;
     std::vector<std::string> words;
 
-    Path performBFS(int startIdx, int endIdx);
+ //   Path performBFS(int startIdx, int endIdx);
 public:
-    Path shortestPath(const std::string& start, const std::string& end);
+   // Path shortestPath(const std::string& start, const std::string& end);
     explicit Graph(int vertexCount);
     ~Graph();
     void addEdge(int from, int to);

@@ -74,7 +74,7 @@ void Graph::addWord(const std::string &word) {
         }
     }
 }
-Path Graph::shortestPath(const std::string& start, const std::string& end) {
+/* Path Graph::shortestPath(const std::string& start, const std::string& end) {
     int startIndex = getIndex(start);
     int endIndex = getIndex(end);
 
@@ -85,8 +85,9 @@ Path Graph::shortestPath(const std::string& start, const std::string& end) {
 
     return performBFS(startIndex, endIndex);
 }
+ */
 
-Path Graph::performBFS(int startIdx, int endIdx) {
+/* Path Graph::performBFS(int startIdx, int endIdx) {
     std::queue<int> bfsQueue;
     std::vector<bool> visited(vertexCount, false);
     std::vector<int> parent(vertexCount, -1);
@@ -120,3 +121,4 @@ Path Graph::performBFS(int startIdx, int endIdx) {
     // If the loop completes without finding the destination, return an empty path
     return Path();
 }
+ */

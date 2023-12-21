@@ -115,6 +115,283 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named graph-puzzle-game-merttkrkmazz
+
+# Build rule for target.
+graph-puzzle-game-merttkrkmazz: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 graph-puzzle-game-merttkrkmazz
+.PHONY : graph-puzzle-game-merttkrkmazz
+
+# fast build rule for target.
+graph-puzzle-game-merttkrkmazz/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/build
+.PHONY : graph-puzzle-game-merttkrkmazz/fast
+
+AbstractGraph.obj: AbstractGraph.cpp.obj
+.PHONY : AbstractGraph.obj
+
+# target to build an object file
+AbstractGraph.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/AbstractGraph.cpp.obj
+.PHONY : AbstractGraph.cpp.obj
+
+AbstractGraph.i: AbstractGraph.cpp.i
+.PHONY : AbstractGraph.i
+
+# target to preprocess a source file
+AbstractGraph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/AbstractGraph.cpp.i
+.PHONY : AbstractGraph.cpp.i
+
+AbstractGraph.s: AbstractGraph.cpp.s
+.PHONY : AbstractGraph.s
+
+# target to generate assembly for a file
+AbstractGraph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/AbstractGraph.cpp.s
+.PHONY : AbstractGraph.cpp.s
+
+DictionaryReader.obj: DictionaryReader.cpp.obj
+.PHONY : DictionaryReader.obj
+
+# target to build an object file
+DictionaryReader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/DictionaryReader.cpp.obj
+.PHONY : DictionaryReader.cpp.obj
+
+DictionaryReader.i: DictionaryReader.cpp.i
+.PHONY : DictionaryReader.i
+
+# target to preprocess a source file
+DictionaryReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/DictionaryReader.cpp.i
+.PHONY : DictionaryReader.cpp.i
+
+DictionaryReader.s: DictionaryReader.cpp.s
+.PHONY : DictionaryReader.s
+
+# target to generate assembly for a file
+DictionaryReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/DictionaryReader.cpp.s
+.PHONY : DictionaryReader.cpp.s
+
+Edge.obj: Edge.cpp.obj
+.PHONY : Edge.obj
+
+# target to build an object file
+Edge.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Edge.cpp.obj
+.PHONY : Edge.cpp.obj
+
+Edge.i: Edge.cpp.i
+.PHONY : Edge.i
+
+# target to preprocess a source file
+Edge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Edge.cpp.i
+.PHONY : Edge.cpp.i
+
+Edge.s: Edge.cpp.s
+.PHONY : Edge.s
+
+# target to generate assembly for a file
+Edge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Edge.cpp.s
+.PHONY : Edge.cpp.s
+
+Element.obj: Element.cpp.obj
+.PHONY : Element.obj
+
+# target to build an object file
+Element.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Element.cpp.obj
+.PHONY : Element.cpp.obj
+
+Element.i: Element.cpp.i
+.PHONY : Element.i
+
+# target to preprocess a source file
+Element.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Element.cpp.i
+.PHONY : Element.cpp.i
+
+Element.s: Element.cpp.s
+.PHONY : Element.s
+
+# target to generate assembly for a file
+Element.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Element.cpp.s
+.PHONY : Element.cpp.s
+
+Graph.obj: Graph.cpp.obj
+.PHONY : Graph.obj
+
+# target to build an object file
+Graph.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Graph.cpp.obj
+.PHONY : Graph.cpp.obj
+
+Graph.i: Graph.cpp.i
+.PHONY : Graph.i
+
+# target to preprocess a source file
+Graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Graph.cpp.i
+.PHONY : Graph.cpp.i
+
+Graph.s: Graph.cpp.s
+.PHONY : Graph.s
+
+# target to generate assembly for a file
+Graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Graph.cpp.s
+.PHONY : Graph.cpp.s
+
+Heap.obj: Heap.cpp.obj
+.PHONY : Heap.obj
+
+# target to build an object file
+Heap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Heap.cpp.obj
+.PHONY : Heap.cpp.obj
+
+Heap.i: Heap.cpp.i
+.PHONY : Heap.i
+
+# target to preprocess a source file
+Heap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Heap.cpp.i
+.PHONY : Heap.cpp.i
+
+Heap.s: Heap.cpp.s
+.PHONY : Heap.s
+
+# target to generate assembly for a file
+Heap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Heap.cpp.s
+.PHONY : Heap.cpp.s
+
+HeapNode.obj: HeapNode.cpp.obj
+.PHONY : HeapNode.obj
+
+# target to build an object file
+HeapNode.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/HeapNode.cpp.obj
+.PHONY : HeapNode.cpp.obj
+
+HeapNode.i: HeapNode.cpp.i
+.PHONY : HeapNode.i
+
+# target to preprocess a source file
+HeapNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/HeapNode.cpp.i
+.PHONY : HeapNode.cpp.i
+
+HeapNode.s: HeapNode.cpp.s
+.PHONY : HeapNode.s
+
+# target to generate assembly for a file
+HeapNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/HeapNode.cpp.s
+.PHONY : HeapNode.cpp.s
+
+Main.obj: Main.cpp.obj
+.PHONY : Main.obj
+
+# target to build an object file
+Main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Main.cpp.obj
+.PHONY : Main.cpp.obj
+
+Main.i: Main.cpp.i
+.PHONY : Main.i
+
+# target to preprocess a source file
+Main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Main.cpp.i
+.PHONY : Main.cpp.i
+
+Main.s: Main.cpp.s
+.PHONY : Main.s
+
+# target to generate assembly for a file
+Main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Main.cpp.s
+.PHONY : Main.cpp.s
+
+MinHeap.obj: MinHeap.cpp.obj
+.PHONY : MinHeap.obj
+
+# target to build an object file
+MinHeap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/MinHeap.cpp.obj
+.PHONY : MinHeap.cpp.obj
+
+MinHeap.i: MinHeap.cpp.i
+.PHONY : MinHeap.i
+
+# target to preprocess a source file
+MinHeap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/MinHeap.cpp.i
+.PHONY : MinHeap.cpp.i
+
+MinHeap.s: MinHeap.cpp.s
+.PHONY : MinHeap.s
+
+# target to generate assembly for a file
+MinHeap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/MinHeap.cpp.s
+.PHONY : MinHeap.cpp.s
+
+Path.obj: Path.cpp.obj
+.PHONY : Path.obj
+
+# target to build an object file
+Path.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Path.cpp.obj
+.PHONY : Path.cpp.obj
+
+Path.i: Path.cpp.i
+.PHONY : Path.i
+
+# target to preprocess a source file
+Path.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Path.cpp.i
+.PHONY : Path.cpp.i
+
+Path.s: Path.cpp.s
+.PHONY : Path.s
+
+# target to generate assembly for a file
+Path.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Path.cpp.s
+.PHONY : Path.cpp.s
+
+Queue.obj: Queue.cpp.obj
+.PHONY : Queue.obj
+
+# target to build an object file
+Queue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Queue.cpp.obj
+.PHONY : Queue.cpp.obj
+
+Queue.i: Queue.cpp.i
+.PHONY : Queue.i
+
+# target to preprocess a source file
+Queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Queue.cpp.i
+.PHONY : Queue.cpp.i
+
+Queue.s: Queue.cpp.s
+.PHONY : Queue.s
+
+# target to generate assembly for a file
+Queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\graph-puzzle-game-merttkrkmazz.dir\build.make CMakeFiles/graph-puzzle-game-merttkrkmazz.dir/Queue.cpp.s
+.PHONY : Queue.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -123,6 +400,40 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... graph-puzzle-game-merttkrkmazz
+	@echo ... AbstractGraph.obj
+	@echo ... AbstractGraph.i
+	@echo ... AbstractGraph.s
+	@echo ... DictionaryReader.obj
+	@echo ... DictionaryReader.i
+	@echo ... DictionaryReader.s
+	@echo ... Edge.obj
+	@echo ... Edge.i
+	@echo ... Edge.s
+	@echo ... Element.obj
+	@echo ... Element.i
+	@echo ... Element.s
+	@echo ... Graph.obj
+	@echo ... Graph.i
+	@echo ... Graph.s
+	@echo ... Heap.obj
+	@echo ... Heap.i
+	@echo ... Heap.s
+	@echo ... HeapNode.obj
+	@echo ... HeapNode.i
+	@echo ... HeapNode.s
+	@echo ... Main.obj
+	@echo ... Main.i
+	@echo ... Main.s
+	@echo ... MinHeap.obj
+	@echo ... MinHeap.i
+	@echo ... MinHeap.s
+	@echo ... Path.obj
+	@echo ... Path.i
+	@echo ... Path.s
+	@echo ... Queue.obj
+	@echo ... Queue.i
+	@echo ... Queue.s
 .PHONY : help
 
 
