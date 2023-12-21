@@ -43,13 +43,14 @@ void Graph::addEdge(int from, int to, int weight) {
 
 }
 
-int Graph::getIndex(const std::string &word) {
+/* int Graph::getIndex(const std::string &word) {
     auto it = std::find(words.begin(), words.end(), word);
     if (it != words.end()) {
         return std::distance(words.begin(), it);
     }
     return -1;
 }
+ */
 
 void Graph::addWord(const std::string &word) {
     words.push_back(word);
