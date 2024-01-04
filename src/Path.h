@@ -13,9 +13,9 @@ public:
     Path(int distance, int previous);
     Path() = default;
     int getDistance() const;
-    int getPrevious() const;
     void setDistance(int _distance);
     void setPrevious(int _previous);
+    int getPrevious() const;
 };
 
 

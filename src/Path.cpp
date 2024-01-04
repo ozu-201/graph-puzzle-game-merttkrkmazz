@@ -6,10 +6,6 @@ Path::Path(int distance, int previous) {
     this->previous = previous;
 }
 
-int Path::getPrevious() const {
-    return previous;
-}
-
 int Path::getDistance() const{
     return distance;
 }
@@ -20,4 +16,8 @@ void Path::setDistance(int _distance) {
 
 void Path::setPrevious(int _previous) {
     this->previous = _previous;
+}
+
+int Path::getPrevious() const {
+    return previous;
 }

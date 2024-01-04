@@ -1,31 +1,30 @@
-//
-//
-//
 
 #ifndef GRAPH_PUZZLE_GAME_MERTTKRKMAZZ_QUEUE_H
 #define GRAPH_PUZZLE_GAME_MERTTKRKMAZZ_QUEUE_H
 
 #include "Element.h"
 
-class Queue {
-private:
-    Element *array;
-    int first;
-    int last;
-    int N;
-public:
-    explicit Queue(int N);
+namespace array {
 
-    ~Queue();
+    class Queue {
+    private:
+        Element *array;
+        int first;
+        int last;
+        int N;
+    public:
+        explicit Queue(int N);
 
-    bool isFull() const;
+        ~Queue();
 
-    bool isEmpty() const;
+        bool isFull() const;
 
-    void enqueue(Element element);
+        bool isEmpty() const;
 
-    Element dequeue();
-};
+        void enqueue(Element element);
 
+        Element dequeue();
+    };
+}
 
 #endif //GRAPH_PUZZLE_GAME_MERTTKRKMAZZ_QUEUE_H

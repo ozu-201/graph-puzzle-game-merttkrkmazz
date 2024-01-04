@@ -1,33 +1,33 @@
-
 #include "DictionaryReader.h"
-#include "Graph.h"
-#include "fstream"
 #include <string>
-#include "iostream"
+#include <vector>
+#include <iostream>
+#include "Graph.h"
+#include <fstream>
 
-DictionaryReader :: DictionaryReader(const std::string filename) : dictionaryFileName(filename){
 
-}
+DictionaryReader :: DictionaryReader(const std::string filename) : dictionaryFileName(filename){}
 
-int DictionaryReader :: countLetters(const std::string& word) {
+int DictionaryReader::countLetters(const std::string word){
     int count = 0;
-    for (char letter : word) {
-        if ((letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z')) {
-            count++;
-        }
-        else if (letter >= -128 && letter <= -97){
+    for(char letter:word){
+        if(letter >= 'a' && letter <= 'z' || letter >= 'A' && letter <= 'Z'){
+            count ++;
+        } else if(letter >= -128 && letter <= -97){
             count++;
         }
     }
     return count;
 }
 
-void DictionaryReader :: readDictionary(const std:: string& start,const std:: string& end) {
+void DictionaryReader :: readDictionaryToGraph(const std::string startWord,const std::string endWord){
     std::ifstream file(dictionaryFileName);
-    if (file.is_open()) {
-        std::string word;
-        int letter3count = 0, letter4count = 0, letter5count = 0;
-        while (file >> word) {
+    if(file.is_open()){
+        std:: string word;
+        int letter3count = 0;
+        int letter4count = 0;
+        int letter5count = 0;
+        while(file >> word) {
             if (countLetters(word) == 3) {
                 letter3count++;
                 g3WordList.push_back(word);
@@ -42,19 +42,29 @@ void DictionaryReader :: readDictionary(const std:: string& start,const std:: st
             }
         }
         file.close();
-        Graph g3(letter3count);
-        Graph g4(letter4count);
-        Graph g5(letter5count);
-        for (const std::string& word3 : g3WordList) {
+        array::Graph g3(letter3count);
+        array::Graph g4(letter4count);
+        array::Graph g5(letter5count);
+
+        for(std::string word3 : g3WordList){
             g3.addWord(word3);
         }
-        for (const std::string& word4 : g4WordList) {
+        for(std::string word4 : g4WordList){
             g4.addWord(word4);
         }
-        for (const std::string& word5 : g5WordList) {
+        for(std::string word5 : g5WordList){
             g5.addWord(word5);
         }
-    } else {
-        std::cout << "Failed to open file!" << std::endl;
+        if(countLetters(startWord)==3 && countLetters(endWord) == 3){
+            g3.Dijkstra(startWord,endWord);
+        }
+        if(countLetters(startWord)==4 && countLetters(endWord) == 4){
+            g4.Dijkstra(startWord,endWord);
+        }
+        if(countLetters(startWord)==5 && countLetters(endWord) == 5){
+            g5.Dijkstra(startWord,endWord);
+        }
+    } else{
+        std::cout << "a" << std::endl;
     }
 }

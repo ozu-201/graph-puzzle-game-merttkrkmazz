@@ -10,10 +10,16 @@
 class AbstractGraph {
 protected:
     int vertexCount;
+    virtual void depthFirstSearch(bool* visited, int fromNode) = 0;
+   // virtual void breadthFirstSearch(bool* visited, int startNode) = 0;
+    Path* initializePaths(int source) const;
 public:
     explicit AbstractGraph(int vertexCount);
-    Path*  initializePaths(int source) const;
+    int connectedComponentDfs();
+    int connectedComponentBfs();
+    void kruskal();
 };
+
 
 
 

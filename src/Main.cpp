@@ -1,16 +1,65 @@
 #include <iostream>
 #include "DictionaryReader.h"
-#include <string>
-
+#include "Graph.h"
 
 int main() {
-    std::cout << "Hello World" << std::endl;
-    std::string fileName = "/Users/mk034587/turkishDict.txt";
-    DictionaryReader reader(fileName);
-    std::string start = "masa";
-    std::string finish = "masal";
-    reader.readDictionary(start,finish);
+
+ /* std::string filename = "/Users/mertkorkmaz/deneme1.txt";
+    DictionaryReader reader (filename);
+    std::string start,finish;
+    std:: cout << "Enter starting word: " << std::endl;
+    std::getline(std::cin,start);
+    std:: cout << "Enter destination word: " << std::endl;
+    std::getline(std::cin,finish);
+ */
+
+ /*   array::Graph graph3(4);
+    graph3.addWord("cat");
+    graph3.addWord("cot");
+    graph3.addWord("dot");
+    graph3.addWord("dog");
+    //My addWord method is already creating an edge
+
+    std::cout << "Test Case: Adding Edges with One-Letter Difference (3 letter words)\n";
+    std::cout << "Shortest Path from 'cat' to 'dog' (BFS):\n";
+    graph3.BFS("cat", "dog");
+    std::cout << "Shortest Path from 'cat' to 'dog' (Dijkstra):\n";
+    graph3.Dijkstra("cat", "dog");
+    std::cout << "------------------------------------------\n";
+
+    // Test Case: Adding Edges with One-Letter Difference (4 letter words)
+    array::Graph graph4(3);
+    graph4.addWord("dark");
+    graph4.addWord("bark");
+    graph4.addWord("barn");
+    //My addWord method is already creating an edge
+
+    std::cout << "Test Case: Adding Edges with One-Letter Difference (4 letter words)\n";
+    std::cout << "Shortest Path from 'dark' to 'barn' (BFS):\n";
+    graph4.BFS("dark", "barn");
+    std::cout << "Shortest Path from 'dark' to 'barn' (Dijkstra):\n";
+    graph4.Dijkstra("dark", "barn");
+    std::cout << "------------------------------------------\n";
+
+    // Test Case: Adding Edges with One-Letter Difference (5 letter words)
+    array::Graph graph5(3);
+    graph5.addWord("stone");
+    graph5.addWord("store");
+    graph5.addWord("score");
+    //My addWord method is already creating an edge
 
 
+    std::cout << "Test Case: Adding Edges with One-Letter Difference (5 letter words)\n";
+    std::cout << "Shortest Path from 'stone' to 'score' (BFS):\n";
+    graph5.BFS("stone", "score");
+    std::cout << "Shortest Path from 'stone' to 'score' (Dijkstra):\n";
+    graph5.Dijkstra("stone", "score");
+    std::cout << "------------------------------------------\n";
+*/
+    std::cout<<"Hello WOrld";
     return 0;
+    // reader.readDictionaryToGraph(start,finish);
+
 }
+
+
