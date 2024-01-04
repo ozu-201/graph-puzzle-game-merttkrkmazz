@@ -14,18 +14,19 @@ int main() {
     // reader.readDictionaryToGraph(start,finish);
  */
 
+
     array::Graph graph3(4);
     graph3.addWord("cat");
     graph3.addWord("cot");
     graph3.addWord("cog");
     graph3.addWord("dog");
-    //My addWord method is already creating an edge
+    //My addWord method is already creating an edge.
 
     std::cout << "Test Case: Adding Edges with One-Letter Difference (3 letter words)\n";
     std::cout << "Shortest Path from 'cat' to 'dog' (BFS):\n";
-    graph3.BFS("cat", "dog");
+    graph3.BFS("cat", "dog");                           //BFS
     std::cout << "Shortest Path from 'cat' to 'dog' (Dijkstra):\n";
-    graph3.Dijkstra("cat", "dog");
+    graph3.Dijkstra("cat", "dog");                      //Dijkstra
     std::cout << "------------------------------------------\n";
 
     // Test Case: Adding Edges with One-Letter Difference (4 letter words)
@@ -57,7 +58,7 @@ int main() {
     graph5.Dijkstra("stone", "score");
     std::cout << "------------------------------------------\n";
 
-    std::cout<<"Hello World";
+   // std::cout<<"Hello World";
     return 0;
 
 
