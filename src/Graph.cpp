@@ -6,6 +6,7 @@
 #include "Edge.h"
 #include <string>
 #include <vector>
+#include <algorithm>
 
 
 namespace array {
@@ -99,6 +100,45 @@ namespace array {
         }
     }
 
+  std::vector<std::string> Graph::Dijkstra(const std::string &startWord, const std::string &endWord){
+        int source = getIndex(startWord);
+        int destination = getIndex(endWord);
+        Path *shortestPaths = initializePaths(source);
+        MinHeap heap = MinHeap(vertexCount);
+        for (int i = 0; i < vertexCount; i++) {
+            heap.insert(HeapNode(shortestPaths[i].getDistance(), i));
+        }
+        while (!heap.isEmpty()) {
+            HeapNode node = heap.deleteTop();
+            int fromNode = node.getName();
+            for (int toNode = 0; toNode < vertexCount; toNode++) {
+                if(edges[fromNode][toNode] > 0) {
+                    int newDistance = shortestPaths[fromNode].getDistance() + edges[fromNode][toNode];
+                    if (newDistance < shortestPaths[toNode].getDistance()) {
+                        int position = heap.search(toNode);
+                        heap.update(position, newDistance);
+                        shortestPaths[toNode].setDistance(newDistance);
+                        shortestPaths[toNode].setPrevious(fromNode);
+                    }
+                }
+            }
+        }
+        std::vector<std::string> pathWords;
+        int currentVertex = destination;
+        while(currentVertex != source){
+            pathWords.push_back(words[currentVertex]);
+            currentVertex = shortestPaths[currentVertex].getPrevious();
+        }
+        pathWords.push_back(words[source]);
+        std::reverse(pathWords.begin(),pathWords.end());
+        std::cout<<"The shortest path from " << startWord << " to " << endWord << " is: " << std::endl;
+        for (const std::string &word:pathWords){
+            std::cout << word << " ";
+        }
+        std::cout << std::endl;
+        delete[] shortestPaths;
+        return pathWords;
+    };
 
 
 
@@ -165,46 +205,7 @@ namespace array {
 
 
 
-/*   std::vector<std::string> Graph::Dijkstra(const std::string &startWord, const std::string &endWord){
-        int source = getIndex(startWord);
-        int destination = getIndex(endWord);
-        Path *shortestPaths = initializePaths(source);
-        MinHeap heap = MinHeap(vertexCount);
-        for (int i = 0; i < vertexCount; i++) {
-            heap.insert(HeapNode(shortestPaths[i].getDistance(), i));
-        }
-        while (!heap.isEmpty()) {
-            HeapNode node = heap.deleteTop();
-            int fromNode = node.getName();
-            for (int toNode = 0; toNode < vertexCount; toNode++) {
-                if(edges[fromNode][toNode] > 0) {
-                    int newDistance = shortestPaths[fromNode].getDistance() + edges[fromNode][toNode];
-                    if (newDistance < shortestPaths[toNode].getDistance()) {
-                        int position = heap.search(toNode);
-                        heap.update(position, newDistance);
-                        shortestPaths[toNode].setDistance(newDistance);
-                        shortestPaths[toNode].setPrevious(fromNode);
-                    }
-                }
-            }
-        }
-        std::vector<std::string> pathWords;
-        int currentVertex = destination;
-        while(currentVertex != source){
-            pathWords.push_back(words[currentVertex]);
-            currentVertex = shortestPaths[currentVertex].getPrevious();
-        }
-        pathWords.push_back(words[source]);
-        std::reverse(pathWords.begin(),pathWords.end());
-        std::cout<<"The shortest path from " << startWord << " to " << endWord << " is: " << std::endl;
-        for (const std::string &word:pathWords){
-            std::cout << word << " ";
-        }
-        std::cout << std::endl;
-        delete[] shortestPaths;
-        return pathWords;
-    };
-*/
+
 
 
 
