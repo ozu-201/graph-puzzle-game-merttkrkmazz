@@ -4,19 +4,20 @@
 
 int main() {
 
- /* std::string filename = "/Users/mertkorkmaz/deneme1.txt";
+ /* std::string filename = "/Users/mk034587/deneme1.txt";
     DictionaryReader reader (filename);
     std::string start,finish;
     std:: cout << "Enter starting word: " << std::endl;
     std::getline(std::cin,start);
     std:: cout << "Enter destination word: " << std::endl;
     std::getline(std::cin,finish);
+    // reader.readDictionaryToGraph(start,finish);
  */
 
- /*   array::Graph graph3(4);
+    array::Graph graph3(4);
     graph3.addWord("cat");
     graph3.addWord("cot");
-    graph3.addWord("dot");
+    graph3.addWord("cog");
     graph3.addWord("dog");
     //My addWord method is already creating an edge
 
@@ -55,10 +56,10 @@ int main() {
     std::cout << "Shortest Path from 'stone' to 'score' (Dijkstra):\n";
     graph5.Dijkstra("stone", "score");
     std::cout << "------------------------------------------\n";
-*/
-    std::cout<<"Hello WOrld";
+
+    std::cout<<"Hello World";
     return 0;
-    // reader.readDictionaryToGraph(start,finish);
+
 
 }
 

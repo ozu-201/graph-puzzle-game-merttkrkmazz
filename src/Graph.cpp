@@ -100,6 +100,50 @@ namespace array {
         }
     }
 
+
+
+    std::vector<std::string> Graph::BFS(const std::string &startWord, const std::string &endWord) {
+        int source = getIndex(startWord);
+        int destination = getIndex(endWord);
+
+        Queue queue = Queue(100);
+        std::vector<int> distances(vertexCount, -1);
+        std::vector<int> previous(vertexCount, -1);
+
+        queue.enqueue(Element(source));
+        distances[source] = 0;
+
+        while (!queue.isEmpty()) {
+            int current = queue.dequeue().getData();
+            for (int neighbor = 0; neighbor < vertexCount; ++neighbor) {
+                if (edges[current][neighbor] > 0 && distances[neighbor] == -1) {
+                    distances[neighbor] = distances[current] + 1;
+                    previous[neighbor] = current;
+                    queue.enqueue(Element(neighbor));
+                }
+            }
+        }
+
+        std::vector<std::string> pathWords;
+        int currentVertex = destination;
+
+        while (currentVertex != -1) {
+            pathWords.push_back(words[currentVertex]);
+            currentVertex = previous[currentVertex];
+        }
+
+        std::reverse(pathWords.begin(), pathWords.end());
+
+        std::cout << "The path from " << startWord << " to " << endWord << " is: " << std::endl;
+        for (const std::string &word : pathWords) {
+            std::cout << word << " ";
+        }
+        std::cout << std::endl;
+
+        return pathWords;
+    }
+
+
   std::vector<std::string> Graph::Dijkstra(const std::string &startWord, const std::string &endWord){
         int source = getIndex(startWord);
         int destination = getIndex(endWord);
@@ -139,8 +183,6 @@ namespace array {
         delete[] shortestPaths;
         return pathWords;
     };
-
-
 
 
    /* Path *Graph::dijkstra(int source) {
@@ -207,47 +249,3 @@ namespace array {
 
 
 
-
-
-/*  std::vector<std::string> Graph::BFS(const std::string &startWord, const std::string &endWord) {
-       int source = getIndex(startWord);
-       int destination = getIndex(endWord);
-
-       Queue queue = Queue(100);
-       std::vector<int> distances(vertexCount, -1);
-       std::vector<int> previous(vertexCount, -1);
-
-       queue.enqueue(Element(source));
-       distances[source] = 0;
-
-       while (!queue.isEmpty()) {
-           int current = queue.dequeue().getData();
-           for (int neighbor = 0; neighbor < vertexCount; ++neighbor) {
-               if (edges[current][neighbor] > 0 && distances[neighbor] == -1) {
-                   distances[neighbor] = distances[current] + 1;
-                   previous[neighbor] = current;
-                   queue.enqueue(Element(neighbor));
-               }
-           }
-       }
-
-       std::vector<std::string> pathWords;
-       int currentVertex = destination;
-
-       while (currentVertex != -1) {
-           pathWords.push_back(words[currentVertex]);
-           currentVertex = previous[currentVertex];
-       }
-
-       std::reverse(pathWords.begin(), pathWords.end());
-
-       std::cout << "The path from " << startWord << " to " << endWord << " is: " << std::endl;
-       for (const std::string &word : pathWords) {
-           std::cout << word << " ";
-       }
-       std::cout << std::endl;
-
-       return pathWords;
-   }
-
-  */
