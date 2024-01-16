@@ -4,16 +4,17 @@
 
 int main() {
 
- /* std::string filename = "/Users/mk034587/deneme1.txt";
+  std::string filename = "/User/mk034587/Dict.txt";
     DictionaryReader reader (filename);
-    std::string start,finish;
-    std:: cout << "Enter starting word: " << std::endl;
-    std::getline(std::cin,start);
-    std:: cout << "Enter destination word: " << std::endl;
-    std::getline(std::cin,finish);
-    // reader.readDictionaryToGraph(start,finish);
- */
 
+    //My readDictionaryToGraph method is creating graphs and also giving the shortest path.
+    //If it cant find your path to file it will print "a" so you can understand that you gave the wrong path to file.
+    //You can use turkishDict becuase english takes too much time because of the size.
+
+    reader.readDictionaryToGraph("kedi","masa");
+
+  //  reader.readDictionaryToGraph("kod","dil");  You can test 3 letter if you want to test one of them comment others.
+  //  reader.readDictionaryToGraph("ermek","erdem"); You can test 5 letter if you want to test one of them comment others.
 
     array::Graph graph3(4);
     graph3.addWord("cat");
@@ -59,9 +60,34 @@ int main() {
     std::cout << "------------------------------------------\n";
 
    // std::cout<<"Hello World";
+
     return 0;
 
 
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  std::string start,finish;
+    //  std:: cout << "Enter starting word: " << std::endl;
+    //  std::getline(std::cin,start);
+    //  std:: cout << "Enter destination word: " << std::endl;
+    //  std::getline(std::cin,finish);
+    */
